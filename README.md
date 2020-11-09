@@ -57,7 +57,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
      You will see that you are now logged in to Horizon - click enter to go back to the menu
 
 
-     ![cs](Images/login.PNG)
+     ![cs](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/login.PNG)
 
 #### Manage Security Servers
 
