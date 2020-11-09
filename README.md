@@ -1,4 +1,4 @@
-### manage-horizon-securityserver
+### horizon-security-server-management
 
 Script to manage VMware Horizon Security Servers via the View-API
 
@@ -40,7 +40,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 1. Run `Horizon - Manage Security Server.ps1` 
 
 
-   ![Menu](Images/Menu.PNG)
+   ![Menu](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/Menu.PNG)
 
    #### Login to Horizon Connection Server
 
@@ -67,28 +67,26 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
    *Note: If there are no connection servers detected you will see a message in the console "No Security Servers Found"*
 
 
-   ![gui](Images/gui.PNG)
+   ![gui](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/gui.PNG)
 
    
 
 2. If there are Security Servers bound they will all be added to the "Security Servers" dropdown.  If there are none - you will see "No Security Servers"
    
-
 3. Select the Security Server you would like to manage and click "Get Details" - this will populate the form.
 
 
-   ![viewss](Images/viewss.PNG)
+   ![viewss](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/viewss.PNG)
 
    
 
 4. Review and click the "Cancel" button to exit without changing .  You can also select different Security Servers and click "Get Details"
    
-
 5. To update the settings make changes to any fields you would like to update and click "OK".  You will be prompted if you would like to update that Security Server.  Click "Yes" to make the changes or "No" to exit without making changes.  All three value must NOT be empty.  They are required fields and you will get a warning message if you try to set an empty value
    
 
 
-   ![update](Images/update.PNG)![saved](Images/saved.PNG)
+   ![update](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/update.PNG)![saved](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/saved.PNG)
 
    
 
@@ -111,19 +109,20 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
    - The password will be set and is good for 30 minutes
 
 
-     ![ssppw](Images/ssppw.PNG)
+     ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ssppw.PNG)
 
    
 
-   
 
-   
 
-   
 
-   
 
-   
+
+
+
+
+
+
 
 
 
