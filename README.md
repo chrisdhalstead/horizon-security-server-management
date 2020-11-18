@@ -20,7 +20,7 @@ Updated November 3, 2020<br />
 
 Due to the deprecation of Adobe Flash on 12/31/20 the VMware Horizon 7 Administrator (FLEX) will no longer be able to be used.  More details are here:  https://kb.vmware.com/s/article/78589
 
-It is recommended to get to a minimum of VMware Horizon 7.10 which has an HTML5 based administrative console (Horizon Console) with feature parity with the FLEX console.  There are only two features that were not ported to this new HTML5 administrative console
+It is recommended to get to a minimum of VMware Horizon 7.10 (Version 7.13 is recommended) which has an HTML5 based administrative console (Horizon Console) with feature parity with the FLEX console.  There are only two features that were not ported to this new HTML5 administrative console
 
 - ThinApp integration into Pools (ThinApp still works)
 - Security Server Management
@@ -112,6 +112,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
      ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ssppw.PNG)
 
    
+
 
 
 
