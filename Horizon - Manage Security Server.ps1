@@ -4,11 +4,13 @@
 Script to update existing Horizon Security Servers
 	
 .NOTES
-  Version:        1.0
+  Version:        1.1
   Author:         Chris Halstead - chalstead@vmware.com
                   with help from Andrew Morgan Twitter: @andyjmorgan
   Creation Date:  11/2/2020
+  Update Date:    1/14/2021
   Purpose/Change: Initial script development
+                  1.1 - Allow connection to self signed certificate
 
   This script requires Horizon 7 PowerCLI - https://blogs.vmware.com/euc/2020/01/vmware-horizon-7-powercli.html
   
@@ -35,7 +37,7 @@ $UnsecurePassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($B
 
 try {
     
-    $script:hvServer = Connect-HVServer -Server $horizonserver -User $username -Password $UnsecurePassword -Domain $domain
+    $script:hvServer = Connect-HVServer -Server $horizonserver -User $username -Password $UnsecurePassword -Domain $domain -Force
     $script:hvServices = $hvServer.ExtensionData
     $script:cs = $script:hvServices.connectionserver.ConnectionServer_List()[0].general.name
     $script:csid = $script:hvServices.connectionserver.ConnectionServer_List()[0].id
