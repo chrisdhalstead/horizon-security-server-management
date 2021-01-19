@@ -313,7 +313,7 @@ if ([string]::IsNullOrEmpty($hvserver))
 
   try {
 
-    $msgboxinput = [System.Windows.MessageBox]::Show('The connection server ' + $script:horizonserver + ' must be set to the UTC time zone in order for the password to be set properly. Would you like to proceed? You can manually update the timezone (if not UTC) and change it back after the script is run','Proceed?','YesNo','Question')
+    $msgboxinput = [System.Windows.MessageBox]::Show('The connection server ' + $script:horizonserver + ' must be set to the UTC time zone in order for the password to be set properly. The VMware Horizon View Connection Server service needs to be restarted or the system rebooted after updating the time zone. Would you like to proceed? You can manually update the timezone (if not UTC) and change it back after the script is run','Proceed?','YesNo','Question')
 
     switch  ($msgBoxInput) {
   
