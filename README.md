@@ -98,7 +98,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
    In order to add a new Security Server - you need to specify a pairing password for one-time authentication to the connection server.   This password is good for 30 minutes and just a one-time password.  This script allows you to set that password.  
 
-   **Make sure the Timezone of the connection server that you will connect to with the script is set to <u>(UTC) Universal Coordinated Time</u> prior to running the script on it**
+   **Make sure the Timezone of the connection server that you will connect to with the script is set to <u>(UTC) Coordinated Universal Time</u> prior to running the script on it**
 
      ![Timezone](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/Timezone.PNG)
 
