@@ -98,20 +98,27 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
    In order to add a new Security Server - you need to specify a pairing password for one-time authentication to the connection server.   This password is good for 30 minutes and just a one-time password.  This script allows you to set that password.  
 
+   **Make sure the Timezone of the connection server that you will connect to with the script is set to <u>(UTC) Universal Coordinated Time</u> prior to running the script on it**
+
+     ![Timezone](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/Timezone.PNG)![saved](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/Timezone.PNG)
+
+      
+
    > While putting together the script I realized that the `pae-securityserverpairingpasswordlastchangedtime` parameter in the ADAM database which is used to determine when the password was last set and used to compare to the validity time is not being set properly if you connection server is not using the UTC time zone.  If you leave the connection server to a non UTC time zone and run this script the password last set time will be the time zone of the connection server which almost certainly deem the password invalid.  If your connection server is in a time zone other than UTC you will need to set to set it to the UTC time zone, restart the "VMware Horizon View Connection Server" service.  Run the script to set the password, then you can change the time zone on the connection server back.
 
    - Enter **2** to specify a Security Server pairing password.
-
+   
    - You will see a pop up warning you that the Connection Server time zone needs to be set to UTC while running this script (see above)
-
+   
    - Enter the password you would like to use and hit enter
-
+   
    - The password will be set and is good for 30 minutes
 
 
      ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ssppw.PNG)
 
    
+
 
 
 
