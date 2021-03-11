@@ -40,7 +40,7 @@ try {
     $script:hvServer = Connect-HVServer -Server $horizonserver -User $username -Password $UnsecurePassword -Domain $domain -Force
     $script:hvServices = $hvServer.ExtensionData
     $script:csid = $script:hvServices.connectionserver.ConnectionServer_List()[0].id
-    $script:cs = $script:hvServices.connectionserver.ConnectionServer_List()[0].Name
+    $script:cs = $script:hvServices.connectionserver.ConnectionServer_List()[0].general.name
     }
 
 catch {
@@ -86,7 +86,7 @@ Function GetSSInfo {
 
 $Main                            = New-Object system.Windows.Forms.Form
 $Main.ClientSize                 = New-Object System.Drawing.Point(490,363)
-$Main.text                       = "Horizon Security Servers for "+$cs
+$Main.text                       = "Horizon Security Servers for "+$script:cs
 $Main.TopMost                    = $true
 
 $lblsecurityservers              = New-Object system.Windows.Forms.Label
