@@ -39,9 +39,8 @@ try {
     
     $script:hvServer = Connect-HVServer -Server $horizonserver -User $username -Password $UnsecurePassword -Domain $domain -Force
     $script:hvServices = $hvServer.ExtensionData
-
     $script:csid = $script:hvServices.connectionserver.ConnectionServer_List()[0].id
-
+    $script:cs = $script:hvServices.connectionserver.ConnectionServer_List()[0].Name
     }
 
 catch {
@@ -78,8 +77,6 @@ Function GetSSInfo {
         }
 
           $script:sslookup = @{}
-
-
 
           foreach ($item in $ss) {
       
