@@ -21,7 +21,7 @@ Script to update existing Horizon Security Servers
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName PresentationFramework
 [System.Windows.Forms.Application]::EnableVisualStyles()
-import-module vmware.powercli
+#import-module vmware.powercli - remarked out 3/11/21 - CDH
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
 Function LogintoHorizon {
 
@@ -39,7 +39,7 @@ try {
     
     $script:hvServer = Connect-HVServer -Server $horizonserver -User $username -Password $UnsecurePassword -Domain $domain -Force
     $script:hvServices = $hvServer.ExtensionData
-    $script:cs = $script:hvServices.connectionserver.ConnectionServer_List()[0].general.name
+
     $script:csid = $script:hvServices.connectionserver.ConnectionServer_List()[0].id
 
     }
@@ -334,7 +334,7 @@ if ([string]::IsNullOrEmpty($hvserver))
   $sppw = Read-Host -Prompt 'Specify the Security Server Pairing Password' -AsSecureString
   $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sppw)
   $UnsecurePW = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
-  $ConnectionServerId = $script:hvServices.connectionserver.ConnectionServer_List()[0].Id
+  $ConnectionServerId = $script:csid
   $pair = new-object -TypeName VMware.Hv.ConnectionServerSecurityServerPairingData
   $securestring = new-object -TypeName VMware.Hv.SecureString
   $enc = [system.Text.Encoding]::UTF8
