@@ -46,7 +46,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
 2. Choose **1** to Login to a Horizon Connection Server 
 
-   - Enter the FQDN of the server when prompted to "Enter the Horizon Server Name" hit enter
+   - Enter the FQDN of a connection server  (**NOT a Security Server**) when prompted to "Enter the Horizon Server Name" hit enter
 
    - Enter the Username of an account with Administrative access to the Horizon Server you are connecting to when prompted to "Enter the Username" hit enter
 
@@ -118,6 +118,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
      ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ssppw.PNG)
 
    
+
 
 
 
