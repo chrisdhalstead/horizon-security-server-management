@@ -26,7 +26,7 @@ Add-Type -AssemblyName PresentationFramework
 Function LogintoHorizon {
 
 #Capture Login Information
-$script:HorizonServer = Read-Host -Prompt 'Enter the Horizon Connection Server Name'
+$script:HorizonServer = Read-Host -Prompt 'Enter the Horizon Connection Server Name - NOT the Security Server'
 $Username = Read-Host -Prompt 'Enter the Username'
 $Password = Read-Host -Prompt 'Enter the Password' -AsSecureString
 $domain = Read-Host -Prompt 'Enter the Horizon Domain'
