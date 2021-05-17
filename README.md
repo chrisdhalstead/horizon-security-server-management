@@ -27,6 +27,22 @@ It is recommended to get to a minimum of VMware Horizon 7.10 (Version 7.13 is re
 
 It is recommended to move off the Horizon Security Server to the [Unified Access Gateway](https://techzone.vmware.com/deploying-vmware-unified-access-gateway-vmware-workspace-one-operational-tutorial) as the Security Server is no longer supported in Horizon 8 and it is a superior solution for providing remote access.   If you have existing Horizon Security Servers there is no way to manage them with the new Horizon Console HTML5 console.   This script can be used to manage those existing Security Servers and create a Security Server Pairing password.  These are the two features needed for adding and updating Security Server.
 
+### Preparing Security Server for Upgrade or Reinstallation
+
+If you need to upgrade your security server and are looking for the "Prepare for Upgrade or Reinstallation" button in the admin console - it is no longer there.  Thankfully, the solution is just a matter or removing IPsec rules on both the Connection Server that is paired with it and the Security Server.  
+
+1. Start > Control Panel > Windows Firewall
+
+2. In the left pane, click Advanced Settings
+
+3. Expand Windows Firewall with Advanced Services and select Connection Security Rules
+
+4. In the right pane, select VMware View Security Server QM Pairing with xxx.xxx.xxx.xxx.  Select this rule and delete it.
+
+Do that on both the security server and the connection server it's paired with.  Then you can upgrade your security server.
+
+Reference:  https://communities.vmware.com/t5/Horizon-Desktops-and-Apps/Security-Server-Upgrade-Problem/td-p/395429 
+
 ### Script Overview
 
 This is a PowerShell script that uses PowerCLI and the View-API to query and set the Security Server settings.  For more information on how to setup PowerCLI check out [this great article by my colleague Graeme Gordon](https://blogs.vmware.com/euc/2020/01/vmware-horizon-7-powercli.html).  There are two functions that the script can be used for.
@@ -118,6 +134,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
      ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ssppw.PNG)
 
    
+
 
 
 
