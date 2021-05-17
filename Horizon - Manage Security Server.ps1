@@ -21,7 +21,7 @@ Script to update existing Horizon Security Servers
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName PresentationFramework
 [System.Windows.Forms.Application]::EnableVisualStyles()
-import-module vmware.powercli
+#import-module vmware.powercli
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
 Function LogintoHorizon {
 
