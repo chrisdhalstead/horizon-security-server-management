@@ -110,7 +110,7 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
    #### Set Security Server Pairing Password
 
-   ***This section is only needed when adding a new security server.  It is recommended to migrate to the Unified Access Gateway.Only use the Security Server if you absolutely have to***
+   ***This section is only needed when adding a new security server.  It is recommended to migrate to the Unified Access Gateway. Only use the Security Server if you absolutely have to***
 
    In order to add a new Security Server - you need to specify a pairing password for one-time authentication to the connection server.   This password is good for 30 minutes and just a one-time password.  This script allows you to set that password.  
 
@@ -133,7 +133,8 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
      ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ssppw.PNG)
 
-   
+   You can now install a Security Server and specify the Pairing Password you set in the script.
+
 
 
 
