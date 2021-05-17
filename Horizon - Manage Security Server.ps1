@@ -21,12 +21,12 @@ Script to update existing Horizon Security Servers
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName PresentationFramework
 [System.Windows.Forms.Application]::EnableVisualStyles()
-#import-module vmware.powercli
+import-module vmware.powercli
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
 Function LogintoHorizon {
 
 #Capture Login Information
-$script:HorizonServer = Read-Host -Prompt 'Enter the Horizon Connection Server Name - NOT the Security Server'
+$script:HorizonServer = Read-Host -Prompt 'Enter a Horizon Connection Server Name - NOT a Security Server'
 $Username = Read-Host -Prompt 'Enter the Username'
 $Password = Read-Host -Prompt 'Enter the Password' -AsSecureString
 $domain = Read-Host -Prompt 'Enter the Horizon Domain'
