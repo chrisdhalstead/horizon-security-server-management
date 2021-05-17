@@ -29,7 +29,7 @@ It is recommended to move off the Horizon Security Server to the [Unified Access
 
 ### Preparing Security Server for Upgrade or Reinstallation
 
-If you need to upgrade your security server and are looking for the "Prepare for Upgrade or Reinstallation" button in the admin console - it is no longer there.  Thankfully, the solution is just a matter of removing IPsec rules on both the Connection Server that is paired with it and the Security Server.  
+If you need to upgrade your security server and are looking for the "Prepare for Upgrade or Reinstallation" button in the admin console - it is no longer there.  Thankfully, the solution is just a matter of removing IPsec rules on both the Security Server and the Connection Server that it is paired with.
 
 1. Start > Control Panel > Windows Firewall
 
