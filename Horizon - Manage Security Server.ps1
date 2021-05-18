@@ -39,8 +39,30 @@ try {
     
     $script:hvServer = Connect-HVServer -Server $horizonserver -User $username -Password $UnsecurePassword -Domain $domain -Force
     $script:hvServices = $hvServer.ExtensionData
-    $script:csid = $script:hvServices.connectionserver.ConnectionServer_List()[0].id
-    $script:cs = $script:hvServices.connectionserver.ConnectionServer_List()[0].general.name
+    $csservers = $script:hvserver.ExtensionData.ConnectionServerHealth.ConnectionserverHealth_List()
+
+    if($horizonserver.Contains("."))
+
+    {
+      $ahorizonserver = $horizonserver.Split(".")
+      $horizonserver = $ahorizonserver[0]
+    }
+     
+    foreach ($server in $csservers)
+
+    {
+
+      if($server.name -eq $horizonserver)
+          {
+
+            $script:csid = $server.id
+            $script:cs = $server.name
+
+          }
+   
+        }
+
+  
     }
 
 catch {
