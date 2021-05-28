@@ -6,7 +6,7 @@ Script to manage VMware Horizon Security Servers via the View-API
 
 Please provide any feedback directly to me - my contact information: 
 
-Chris Halstead - Staff Architect, VMware  
+Chris Halstead - Senior Staff Architect, VMware  
 Email: chalstead@vmware.com  
 Twitter: @chrisdhalstead  <br />
 
