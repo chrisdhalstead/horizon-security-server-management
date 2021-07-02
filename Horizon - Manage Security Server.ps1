@@ -51,10 +51,12 @@ try {
     foreach ($server in $csservers)
 
     {
+      
 
       if($server.name -eq $horizonserver)
           {
 
+            $sversion = $server.version
             $script:csid = $server.id
             $script:cs = $server.name
 
@@ -70,9 +72,16 @@ catch {
   break
 }
 
-write-host "Successfully Logged In"
+if ($sversion -gt "8")
+{
 
-#add code to get version of Horizon and exit on Horizon 8
+  write-host("The Horizon Security Server is no longer supported on Horizon 8 - exiting")
+  Exit  
+ 
+}
+
+write-host "Successfully Logged In - Horizon Version $sversion detected "
+
 
 } 
 
