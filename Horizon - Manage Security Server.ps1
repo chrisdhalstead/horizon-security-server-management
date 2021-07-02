@@ -72,6 +72,8 @@ catch {
 
 write-host "Successfully Logged In"
 
+#add code to get version of Horizon and exit on Horizon 8
+
 } 
 
 Function GetSSInfo {
