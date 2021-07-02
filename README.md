@@ -141,14 +141,14 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
 You can verify the password was set properly by [connecting to the ADAM database](https://kb.vmware.com/s/article/2012377) on the server you set the password on.
 
- ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ADAM2.PNG)
+ ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ADAM2.png)
 
 - Navigate to OU=Properties | OU=Server | Double-Click the Server name you set the password on and navigate to:
   - `pae-SecurityServerPairingPassword` - this should have an encrypted value
   - `pae-SecurityServerPasswordLastChangedTime` - This is the important value, to make sure that when you double-click on it the UTC time is less that 30 minutes from the current time in UTC
   - `pae-SecurityServerPairingPasswordTimeout` - This should be set to 1800 (30 minutes) if the password was set with this script.
 
- ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ADAM.PNG)
+ ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ADAM1.png)
 
 
 
