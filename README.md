@@ -139,6 +139,8 @@ This is a PowerShell script that uses PowerCLI and the View-API to query and set
 
 **Troubleshooting:**
 
+If the script hangs after entering credentials, you are most likely running PowerShell 7.x, this script has a problem with 7.x and works best with PowerShell 5.x.
+
 You can verify the password was set properly by [connecting to the ADAM database](https://kb.vmware.com/s/article/2012377) on the server you set the password on.
 
  ![ssppw](https://github.com/chrisdhalstead/horizon-security-server-management/blob/master/Images/ADAM2.png)
